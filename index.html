@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Victims</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    #victim {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: red;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #victims {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: red;
+        text-align: justify;
+        margin: 0;
+    }
+
+    #delay {
+        color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #delay p {
+        margin-bottom: 5px;
+    }
+
+    #victimsNum {
+        color: red;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        text-align: right;
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+
+    #listCheck {
+        color: red;
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        margin-bottom: 0;
+        font-style: italic;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    #listCheck:hover {
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #victim {
+            font-size: 25px;
+            width: 75%;
+        }
+
+        #listCheck {
+            font-size: 60px;
+        }
+
+        #victimsNum {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        #delay {
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <p id="victim"></p>
+    <p id="victims"></p>
+    <div id="delay">
+        <p>Delay between names in seconds</p>
+        <input type="number" id="delayInput" name="delay" min="0" max="1000" value="1" />
+    </div>
+    <p id="victimsNum"></p>
+    <p id="listCheck" onclick="changeView()">List</p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
