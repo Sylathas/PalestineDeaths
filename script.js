@@ -1,8 +1,14 @@
-window.addEventListener('load', function () {
+function Start() {
     getSampleText();
-});
+};
 
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    getSampleText();
+}
 async function getSampleText() {
+    this.document.getElementById('start').style.display = 'none';
+    this.document.getElementById('victimsNum').style.display = 'inline';
+    this.document.getElementById('victim').style.display = 'inline';
     let victims = await fetch('nomi.txt')
         .then((response) => response.text())
         .then((text) => {

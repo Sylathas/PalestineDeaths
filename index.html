@@ -11,7 +11,23 @@
         background-color: black;
     }
 
+    #start {
+        font-size: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #start:hover {
+        color: red;
+    }
+
     #victim {
+        display: none;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -46,6 +62,7 @@
     }
 
     #victimsNum {
+        display: none;
         color: red;
         position: absolute;
         bottom: 10px;
@@ -100,6 +117,7 @@
 </style>
 
 <body>
+    <p id="start" onclick="Start()">Start</p>
     <p id="victim"></p>
     <p id="victims"></p>
     <div id="delay">
