@@ -19,7 +19,7 @@ async function getSampleText() {
     let i = 0;
     while (lines[i]) {
         this.document.getElementById('victim').innerHTML = lines[i];
-        this.document.getElementById('victimsNum').innerHTML = 'Victim ' + (i + 1);
+        this.document.getElementById('victimsNum').innerHTML = 'Martyr ' + (i + 1);
         await this.timeout(document.getElementById("delayInput").value * 1000);
         i++;
         if (!lines[i]) {
