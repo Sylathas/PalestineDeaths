@@ -7,7 +7,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
 }
 async function getSampleText() {
     this.document.getElementById('start').style.display = 'none';
-    this.document.getElementById('victimsNum').style.display = 'inline';
     this.document.getElementById('victim').style.display = 'inline';
     let victims = await fetch('nomi.txt')
         .then((response) => response.text())
@@ -19,7 +18,6 @@ async function getSampleText() {
     let i = 0;
     while (lines[i]) {
         this.document.getElementById('victim').innerHTML = lines[i];
-        this.document.getElementById('victimsNum').innerHTML = 'Martyr ' + (i + 1);
         await this.timeout(document.getElementById("delayInput").value * 1000);
         i++;
         if (!lines[i]) {

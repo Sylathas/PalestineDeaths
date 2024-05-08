@@ -61,23 +61,33 @@
         margin-bottom: 5px;
     }
 
-    #victimsNum {
-        display: none;
+    #martyrDescIta {
         color: white;
         position: absolute;
-        bottom: 10px;
+        top: 10px;
         right: 10px;
         text-align: right;
-        margin-bottom: 0;
-        font-size: 30px;
+        margin: 0;
+        font-size: 15px;
+        width: 25%;
+    }
+
+    #martyrDescEng {
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        text-align: left;
+        margin: 0;
+        font-size: 15px;
+        width: 25%;
     }
 
     #listCheck {
         color: white;
         position: fixed;
         bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 10px;
         text-align: center;
         margin-bottom: 0;
         font-style: italic;
@@ -99,15 +109,29 @@
             display: none;
         }
 
-        #victimsNum {
+        #martyrDescIta {
             position: absolute;
             bottom: 10px;
+            top: unset;
             left: 50%;
             transform: translateX(-50%);
-            text-align: center;
-            font-size: 60px;
+            text-align: justify;
+            font-size: 18px;
+            font-style: italic;
             margin: 0;
-            width: 100%;
+            width: 95%;
+        }
+
+        #martyrDescEng {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: justify;
+            font-style: italic;
+            font-size: 18px;
+            margin: 0;
+            width: 95%;
         }
 
         #delay {
@@ -124,7 +148,12 @@
         <p>Delay between names in seconds</p>
         <input type="number" id="delayInput" name="delay" min="0" max="1000" value="1" />
     </div>
-    <p id="victimsNum"></p>
+    <p id="martyrDescIta">Questo è un memoriale dedicato ai martiri palestinesi nella striscia di Gaza che hanno perso
+        la
+        vita a causa del genocidio in atto dal 07/10/2023 per mano dell’esercito israeliano.</p>
+    <p id="martyrDescEng">This is a memorial
+        dedicated to the Palestinian martyrs in the Gaza Strip who lost their
+        life due to the genocide underway since 07/10/2023 at the hands of the Israeli army.</p>
     <p id="listCheck" onclick="changeView()">List</p>
 
     <script src="script.js"></script>
